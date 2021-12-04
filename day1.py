@@ -4,7 +4,7 @@
 import functools
 from itertools import compress
 # open text file input
-with open('input.txt') as f:
+with open('day1input.txt') as f:
     lines = f.readlines()
 # create input array of numbers
     numlist = []
@@ -25,4 +25,4 @@ print(len(list(compress([(int(sub1) < int(sub2)) for sub1, sub2 in zip(numlist, 
 # res = list(compress([(int(sub1) < int(sub2)) for sub1, sub2 in zip(list(sum(numlist[i:i+3]) for i in range(len(numlist)-3)), list(sum(numlist[i:i+3]) for i in range(len(numlist)-3))[1:])], [(int(sub1) < int(sub2)) for sub1, sub2 in zip(list(sum(numlist[i:i+3]) for i in range(len(numlist)-2)), list(sum(numlist[i:i+3]) for i in range(len(numlist)-2))[1:])]))
 
 # Part 2
-print(len(list(compress([(int(sub1) < int(sub2)) for sub1, sub2 in zip(list(sum(numlist[i:i+3]) for i in range(len(numlist)-2)), list(sum(numlist[i:i+3]) for i in range(len(numlist)-3))[1:])], [(int(sub1) < int(sub2)) for sub1, sub2 in zip(list(sum(numlist[i:i+3]) for i in range(len(numlist)-2)), list(sum(numlist[i:i+3]) for i in range(len(numlist)-2))[1:])]))))
+print(len(list(compress([(int(sub1) < int(sub2)) for sub1, sub2 in zip(list(sum(numlist[i:i+3]) for i in range(len(numlist)-2)), list(sum(numlist[i:i+3]) for i in range(len(numlist)-2))[1:])], [(int(sub1) < int(sub2)) for sub1, sub2 in zip(list(sum(numlist[i:i+3]) for i in range(len(numlist)-2)), list(sum(numlist[i:i+3]) for i in range(len(numlist)-2))[1:])]))))
